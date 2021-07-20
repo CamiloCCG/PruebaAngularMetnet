@@ -1,0 +1,94 @@
+<hr>
+
+<h2>Precios</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of productOfferingPrices;  let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{c.versions[0].id}}</td>
+                    <td>{{c.versions[0].name}}</td>
+                    <td>{{c.versions[0].price.amount}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+
+
+
+    </div>
+</div>
+
+<h2>Caracteristicas</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of characteristics;  let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{c.versions[0].id}}</td>
+                    <td>{{c.versions[0].name}}</td>
+                    <td>{{c.versions[0].type}}</td>
+                    <td>{{c.versions[0].valueType}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+
+
+
+    </div>
+</div>
+
+<h2>Ofertas</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let oferta of ofertas;  let i = index" (click)="onUpdate(oferta)" >
+                    <td>{{i+1}}</td>
+                    <td>{{oferta.versions[0].name}}</td>
+                    <td>{{oferta.versions[0].id}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
